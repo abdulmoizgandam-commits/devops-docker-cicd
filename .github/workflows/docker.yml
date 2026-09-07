@@ -2,8 +2,8 @@ name: Docker CI/CD Pipeline
 
 on:
   push:
-    branches:
-      - main
+    branches: [ "main" ]
+  workflow_dispatch:
 
 jobs:
   build-and-push:
@@ -24,4 +24,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: moiz3here/devops-demo:latest
+          tags: moiz3here/devops-docker-cicd:latest
